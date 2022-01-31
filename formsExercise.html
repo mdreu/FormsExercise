@@ -13,6 +13,7 @@
             <legend>Customer Experience Survey</legend>
             <label for="sNumb">Store Number</label>
             <select id="sNumb">
+                <option hidden="num1">Select A Store</option>
                 <option value="num1">3109</option>
                 <option value="num2">2421</option>
                 <option value="num3">5357</option>
@@ -21,7 +22,7 @@
             <fieldset>
                 <legend>When you visited:</legend>
                 <label for="vis">Date Visited</label>
-                <input type="date" id="vis" value="mm-dd-yyyy">
+                <input type="date" min="2022-01-01" max="2022-12-31" step="1" id="vis" value="mm-dd-yyyy">
                 <br>
                 <label for="time">Time</label>
                 <input type="time" id="time">
@@ -36,24 +37,31 @@
                 <input type="radio" id="one" name="Experience">
                 <label for="Satisfied">Satisfied</label>
                 <br>
-                <input type="radio" id="two" name="Experience">
+                <input type="radio" id="two" name="Experience" checked>
                 <label for="Neither">Neither Satisifed nor Dissatisfied</label>
                 <br>
-                <input type="radio" id="two" name="Experience">
+                <input type="radio" id="three" name="Experience">
                 <label for="Dissatisfied">Dissatisfied</label>
             </fieldset>
             <label for="doTell">Tell us about your Experience:</label>
             <br>
             <textarea id="doTell" cols="20" rows="2"></textarea>
             <br>
-            <label for="vCount">Times visited in the last month:</label>
+            <label for="vis">Times visited in the last month:</label>
             <br>
-            <textarea id="vCount" cols="16" rows="1"></textarea>
+            <input type="number" id="two" name="vis" min="1" max="30">
+                
+            
             <br>
-            <input type="checkbox" id="contact">
+            <input type="checkbox" id="contact"required>
             <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>
             <br>
-            <input type="submit"
+            <label for="pass">password</label>
+            <input type="password" id="pass" name="pass" minlength="5" maxlength="10">
+            
+            <br>
+            <input type="reset">
+            <input type="submit">
         </fieldset>
     </form>
 
